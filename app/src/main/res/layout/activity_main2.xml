@@ -10,6 +10,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="65dp"
+        android:id="@+id/i"
         android:src="@color/blue"/>
     <TextView
         android:layout_width="wrap_content"
@@ -38,6 +39,33 @@
     android:layout_alignParentEnd="true"
     android:id="@+id/logout"
     android:layout_margin="15dp"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white"
+
+        android:layout_marginTop="57dp"
+        />
+
+     <com.google.android.material.tabs.TabLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/tablayout"
+         android:layout_below="@+id/i"
+         app:tabTextColor="@color/white"
+         app:tabIndicatorColor="@color/black"
+         app:tabSelectedTextColor="@color/black"
+
+         android:background="@color/blue">
+
+
+     </com.google.android.material.tabs.TabLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tablayout"
+        android:id="@+id/viewpagers"
+       />
 
 
 </RelativeLayout>
