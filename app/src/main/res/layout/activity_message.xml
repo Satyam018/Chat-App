@@ -27,6 +27,7 @@
         android:background="@drawable/imgbg"
         android:id="@+id/simg"
         android:scaleType="fitXY"
+
         android:layout_margin="10dp"
         />
     <EditText
@@ -47,5 +48,13 @@
         android:layout_marginBottom="19dp"
         android:layout_marginRight="15dp"
         android:src="@drawable/ic_baseline_send_24"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerview2"
+        android:layout_above="@+id/message"
+
+        android:background="@drawable/wallpapermessage"
+        android:layout_below="@+id/i"/>
 
 </RelativeLayout>
