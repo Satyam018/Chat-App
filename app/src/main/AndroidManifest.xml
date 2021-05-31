@@ -11,11 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project">
-        <activity android:name=".message"></activity>
+        <activity android:name=".MainActivity3"></activity>
+        <activity android:name=".message" />
         <activity android:name=".MainActivity" />
         <activity android:name=".Login" />
         <activity android:name=".MainActivity2" />
-        <activity android:name=".MainActivity3">
+        <activity android:name=".MainActivity4">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
