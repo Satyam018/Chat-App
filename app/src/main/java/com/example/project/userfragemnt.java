@@ -47,7 +47,7 @@ adapter adapters;
 
         modelusers1=new ArrayList<>();
         createdata();
-        Toast.makeText(getContext(),"user",Toast.LENGTH_SHORT).show();
+
 
 
 

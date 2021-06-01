@@ -34,7 +34,7 @@ public class adapter  extends RecyclerView.Adapter<adapter.viewholder>{
     @Override
     public void onBindViewHolder(@NonNull viewholder holder, int position) {
        if (modelusers.get(position).getImg().equals("default")){
-        holder.img.setImageResource(R.drawable.ic_launcher_background);}
+        holder.img.setImageResource(R.drawable.imgbg);}
        else {
            Glide.with(context).load(modelusers.get(position).getImg()).into(holder.img);
        }

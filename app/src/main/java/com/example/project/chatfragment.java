@@ -43,7 +43,7 @@ public class chatfragment extends Fragment {
 
         FirebaseUser firebaseUser=FirebaseAuth.getInstance().getCurrentUser();
         String currentuseid=firebaseUser.getUid().toString();
-        Toast.makeText(getContext(),currentuseid,Toast.LENGTH_SHORT).show();
+        
         getuser(currentuseid);
 
 

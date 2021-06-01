@@ -71,7 +71,7 @@ public class message extends AppCompatActivity {
                      imageurl=dataSnapshot.child("imageurl").getValue().toString();
                     username.setText(name);
                     if (imageurl.equals("default")){
-                        img.setImageResource(R.drawable.ic_launcher_background);
+                        img.setImageResource(R.drawable.imgbg);
                     }else {
                         Glide.with(getApplicationContext()).load(imageurl).into(img);
                     }
