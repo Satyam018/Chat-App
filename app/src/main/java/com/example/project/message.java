@@ -139,6 +139,7 @@ public class message extends AppCompatActivity {
             }
 
             messageadapters =new messageadapter(getApplicationContext(),chats,imgurl);
+                Log.e(TAG, "onDataChange: "+chats.size() );
             recyclerView.setAdapter(messageadapters);
             }
 

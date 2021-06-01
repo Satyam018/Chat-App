@@ -49,7 +49,9 @@ public class chatuser extends AppCompatActivity {
         send=(ImageView)findViewById(R.id.sendchat);
         chatentered=(EditText)findViewById(R.id.chat) ;
         recyclerView5=(RecyclerView)findViewById(R.id.recycler5);
-        recyclerView5.setLayoutManager(new LinearLayoutManager(this));
+        LinearLayoutManager linearLayoutManager=new LinearLayoutManager(this);
+        linearLayoutManager.setStackFromEnd(true);
+        recyclerView5.setLayoutManager(linearLayoutManager);
 
         String id= getIntent().getStringExtra("id").toString();
         FirebaseUser firebaseUser=FirebaseAuth.getInstance().getCurrentUser();
@@ -91,10 +93,11 @@ public class chatuser extends AppCompatActivity {
                     }
                     Log.e(TAG, "onDataChange: "+uname+imgurl );
 
+
                     }
 
                 }
-                getmessage(current,id,imgurl);
+
             }
 
             @Override
@@ -103,7 +106,7 @@ public class chatuser extends AppCompatActivity {
             }
         });
 
-
+        getmessage(current,id,imgurl);
     }
     public void getmessage(String cuserid, String chatuserid,String imgurl){
         chats=new ArrayList<>();

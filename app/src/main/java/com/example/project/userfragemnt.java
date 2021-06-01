@@ -42,9 +42,12 @@ adapter adapters;
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_userfragemnt, container, false);
         recyclerView=view.findViewById(R.id.recycler);
+        Log.e(TAG, "onCreateView: "+"userfragment" );
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
         modelusers1=new ArrayList<>();
         createdata();
+        Toast.makeText(getContext(),"user",Toast.LENGTH_SHORT).show();
 
 
 
@@ -57,9 +60,11 @@ adapter adapters;
         Log.e(TAG, "createdata: "+currentuser );
         DatabaseReference ref= FirebaseDatabase.getInstance().getReference("users");
         modelusers1.clear();
+
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+
              for (DataSnapshot dataSnapshot:snapshot.getChildren()){
 
 

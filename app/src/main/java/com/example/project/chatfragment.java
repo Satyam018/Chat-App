@@ -43,6 +43,7 @@ public class chatfragment extends Fragment {
 
         FirebaseUser firebaseUser=FirebaseAuth.getInstance().getCurrentUser();
         String currentuseid=firebaseUser.getUid().toString();
+        Toast.makeText(getContext(),currentuseid,Toast.LENGTH_SHORT).show();
         getuser(currentuseid);
 
 
@@ -52,10 +53,11 @@ public class chatfragment extends Fragment {
     public void getuser(String currentuserid){
         userinfo=new ArrayList<>();
         DatabaseReference ref=FirebaseDatabase.getInstance().getReference("users");
+        userinfo.clear();
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-               userinfo.clear();
+
                 for (DataSnapshot dataSnapshot:snapshot.getChildren()){
                     String userd=dataSnapshot.child("id").getValue().toString();
                     if (!userd.equals(currentuserid)){
@@ -80,6 +82,7 @@ public class chatfragment extends Fragment {
     public void getchatuser(String currentuserid,ArrayList<modeluser> model){
         userfinalinfo=new ArrayList<>();
         Log.e(TAG, "getchatuser: "+model.size() );
+        userfinalinfo.clear();
         DatabaseReference ref=FirebaseDatabase.getInstance().getReference("chat");
         ref.addValueEventListener(new ValueEventListener() {
             @Override

@@ -131,4 +131,9 @@ public class MainActivity2 extends AppCompatActivity {
             return title.get(position);
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
 }
