@@ -144,4 +144,12 @@ public class chatuser extends AppCompatActivity {
         hashMap.put("message",message);
         ref.push().setValue(hashMap);
     }
+
+    @Override
+    public void onBackPressed() {
+
+        Intent i=new Intent(this,MainActivity2.class);
+        startActivity(i);
+
+    }
 }
