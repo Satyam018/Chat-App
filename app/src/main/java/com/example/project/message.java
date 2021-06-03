@@ -109,7 +109,7 @@ public class message extends AppCompatActivity {
         hashMap.put("receiver",receiver);
         hashMap.put("message",message);
         reference.child("chat").push().setValue(hashMap);
-
+        this.message.setText("");
 
     }
     private void readmessage(String mtid,String userid,String imgurl){

@@ -143,6 +143,7 @@ public class chatuser extends AppCompatActivity {
         hashMap.put("receiver",receiver);
         hashMap.put("message",message);
         ref.push().setValue(hashMap);
+        this.chatentered.setText("");
     }
 
     @Override
