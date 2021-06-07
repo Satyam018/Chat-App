@@ -91,8 +91,8 @@ public class MainActivity2 extends AppCompatActivity {
             }
         });
         Viewpageradapter viewpageradapter=new Viewpageradapter(getSupportFragmentManager());
-        viewpageradapter.addfragment(new chatfragment(),"chat");
-        viewpageradapter.addfragment(new userfragemnt(),"User");
+        viewpageradapter.addfragment(new chatfragment(),"Previously chatted users");
+        viewpageradapter.addfragment(new userfragemnt(),"All Users");
         viewPager2.setAdapter(viewpageradapter);
         tabLayout.setupWithViewPager(viewPager2);
 
