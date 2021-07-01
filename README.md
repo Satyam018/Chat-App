@@ -1,2 +1,2 @@
 # Chat-App
-made with the help of this playlist: https://www.youtube.com/playlist?list=PLzLFqCABnRQftQQETzoVMuteXzNiXmnj8
+watch video: https://youtu.be/oWW6Y4_Njd0
